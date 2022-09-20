@@ -36,7 +36,11 @@ async function removeContact(contactId) {
     if (!isIdExist) {
       return console.log('No such contact found, nothing was removed.');
     }
-    const updatedContacts = JSON.stringify(result.filter(({ id }) => id !== contactId));
+    const updatedContacts = JSON.stringify(
+      result.filter(({ id }) => id !== contactId),
+      null,
+      2
+    );
     await fs.writeFile(contactsPath, updatedContacts, 'utf8');
     console.log('Contact successfully removed.');
   } catch (error) {
@@ -57,7 +61,7 @@ async function addContact({ name, email, phone }) {
         result.map(({ id }) => Number(id))
       ) + 1
     ).toString();
-    const updatedContacts = JSON.stringify([...result, { id, name, email, phone }]);
+    const updatedContacts = JSON.stringify([...result, { id, name, email, phone }], null, 2);
     await fs.writeFile(contactsPath, updatedContacts, 'utf8');
     console.log('Contact successfully added:');
   } catch (error) {
