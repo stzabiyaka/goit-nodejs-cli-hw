@@ -1,0 +1,26 @@
+{
+  "name": "goit-nodejs-cli-hw",
+  "version": "1.0.0",
+  "description": "goit-nodejs-cli-homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stzabiyaka/goit-nodejs-cli-hw.git"
+  },
+  "author": "Stanislav Zabiyaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stzabiyaka/goit-nodejs-cli-hw/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "commander": "^9.4.0"
+  }
+}
