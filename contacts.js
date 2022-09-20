@@ -44,7 +44,7 @@ async function removeContact(contactId) {
   }
 }
 
-async function addContact(name, email, phone) {
+async function addContact({ name, email, phone }) {
   try {
     const result = await getContacts();
     const isContactExist = result.some(contact => contact.name === name);
